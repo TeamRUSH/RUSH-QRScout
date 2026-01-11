@@ -1,6 +1,6 @@
 {
   "title": "RUSH Scout",
-  "page_title": "RUSH Scout 2025",
+  "page_title": "RUSH Scout 2026",
   "delimiter": "\t",
   "teamNumber": 27,
   "theme": {
@@ -79,7 +79,7 @@
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
-          "max": 19999
+          "max": 11505
         },
         {
           "title": "Starting Position",
@@ -100,21 +100,12 @@
         },
         {
           "title": "Preload",
-          "description": "Did they pre load a coral in their robot?",
-          "type": "boolean",
+          "description": "How much fuel did they preload in their robot?",
+          "type": "counter",
           "required": false,
           "code": "preload",
           "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Deep Cage?",
-          "description": "Is this robot's cage starting low?",
-          "type": "boolean",
-          "required": false,
-          "code": "cage_down",
-          "formResetBehavior": "reset",
-          "defaultValue": false
+          "defaultValue": 8
         }
       ]
     },
@@ -131,287 +122,247 @@
           "defaultValue": false
         },
         {
-          "title": "Auton Algae Reef",
-          "description": "How many algae did they remove from the reef?",
+          "title": "Fuel Scored",
+          "description": "How many fuel did they score? Don't worry if this is off by a bit.",
           "type": "counter",
           "required": false,
-          "code": "autonAlgaeReef",
+          "code": "aScdFul",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "Fuel Missed",
+          "description": "How many shots did they miss? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "aMsdFul",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "Depot Collect",
+          "description": "How much fuel did they take from the depot? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "aDepGrb",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "HP Collect",
+          "description": "How much fuel did they take from the human player? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "aHPGrb",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "Fed HP",
+          "description": "How much fuel did they give to the human player? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "aHPGiv",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "HP Score",
+          "description": "How much fuel did the human player score? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "aHPScr",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
           "step": 1
         },
         {
-          "title": "Auton Algae Ground",
-          "description": "How many algae did they pick up off the ground?",
+          "title": "HP Miss",
+          "description": "How many shots did the human player miss? Don't worry if this is off by a bit.",
           "type": "counter",
           "required": false,
-          "code": "autonAlgaeGround",
+          "code": "aDepGrb",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
           "step": 1
         },
         {
-          "title": "Auton Algae Dropped",
-          "description": "How many algae did they drop in auton?",
+          "title": "Neutral Zone Collect",
+          "description": "How much fuel did they take from the Neutral Zone? Don't worry if this is off by a bit.",
           "type": "counter",
           "required": false,
-          "code": "autonAlgaeDropped",
+          "code": "aNtrlZnGrb",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
-          "step": 1
+          "step": 5
         },
         {
-          "title": "Auton Algae Processed",
-          "description": "How many algae did they score in the processor?",
-          "type": "counter",
-          "required": false,
-          "code": "autonAlgaeProcessed",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Auton Algae Net",
-          "description": "How many algae did they score in the barge?",
-          "type": "counter",
-          "required": false,
-          "code": "autonAlgaeNet",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Auton Coral From HP",
-          "description": "How many coral did they get from the human player station?",
-          "type": "counter",
-          "required": false,
-          "code": "autonCoralHP",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Auton Coral From Ground",
-          "description": "How many coral did they get from the ground?",
-          "type": "counter",
-          "required": false,
-          "code": "autonCoralGround",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Auton Coral L1 Scored",
-          "description": "The number of level 1 coral scored during autonomous.",
-          "type": "counter",
-          "required": false,
-          "code": "CLOA",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Auton Coral L2 Scored",
-          "description": "The number of level 2 coral scored during autonomous.",
-          "type": "counter",
-          "required": false,
-          "code": "CLTA",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Auton Coral L3 Scored",
-          "description": "The number of level 3 coral scored during autonomous.",
-          "type": "counter",
-          "required": false,
-          "code": "CLThA",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Auton Coral L4 Scored",
-          "description": "The number of level 4 coral scored during autonomous.",
-          "type": "counter",
-          "required": false,
-          "code": "CLFA",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Auton Coral Dropped",
-          "description": "How many coral did they drop in auton?",
-          "type": "counter",
-          "required": false,
-          "code": "autonCoralDropped",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        }
-      ]
-    },
-    {
-      "name": "Teleop",
-      "fields": [
-        {
-          "title": "Teleop Algae Reef",
-          "description": "How many algae did they remove from the reef?",
-          "type": "counter",
-          "required": false,
-          "code": "teleopAlgaeReef",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Teleop Algae Ground",
-          "description": "How many algae did they pick up off the ground?",
-          "type": "counter",
-          "required": false,
-          "code": "teleopAlgaeGround",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Teleop Algae Dropped",
-          "description": "How many algae did they drop in teleop?",
-          "type": "counter",
-          "required": false,
-          "code": "teleopAlgaeDropped",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Teleop Algae Processed",
-          "description": "How many algae did they score in the processor?",
-          "type": "counter",
-          "required": false,
-          "code": "teleopAlgaeProcessed",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Teleop Algae Net",
-          "description": "How many algae did they score in the barge?",
-          "type": "counter",
-          "required": false,
-          "code": "teleopAlgaeNet",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Teleop Coral From HP",
-          "description": "How many coral did they get from the human player station?",
-          "type": "counter",
-          "required": false,
-          "code": "teleopCoralHP",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Teleop Coral From Ground",
-          "description": "How many coral did they get from the ground?",
-          "type": "counter",
-          "required": false,
-          "code": "teleopCoralGround",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Teleop Coral L1 Scored",
-          "description": "The number of level 1 coral scored during teleop.",
-          "type": "counter",
-          "required": false,
-          "code": "CLOT",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Teleop Coral L2 Scored",
-          "description": "The number of level 2 coral scored during teleop.",
-          "type": "counter",
-          "required": false,
-          "code": "CLTT",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Teleop Coral L3 Scored",
-          "description": "The number of level 3 coral scored during teleop.",
-          "type": "counter",
-          "required": false,
-          "code": "CLThT",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Teleop Coral L4 Scored",
-          "description": "The number of level 4 coral scored during teleop.",
-          "type": "counter",
-          "required": false,
-          "code": "CLFT",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Teleop Coral Dropped",
-          "description": "How many coral did they drop in teleop?",
-          "type": "counter",
-          "required": false,
-          "code": "teleopCoralDropped",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Crossed Field/Played Defense?",
+          "title": "Went Over Bump?",
+          "description": "Did they go over the bump during autonomous?",
           "type": "boolean",
           "required": false,
-          "code": "CFPDT",
+          "code": "ovrBmp",
           "formResetBehavior": "reset",
           "defaultValue": false
         },
         {
-          "title": "Was Robot Defended by Other Alliance?",
+          "title": "Went Under Trench?",
+          "description": "Did they go over the bump during autonomous?",
           "type": "boolean",
           "required": false,
-          "code": "DEFEg",
+          "code": "udrTrch",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Crossed Center Line?",
+          "description": "Did they go over the bump during autonomous?",
+          "type": "boolean",
+          "required": false,
+          "code": "csdCtrLn",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Auto Climbed?",
+          "description": "Did they go over the bump during autonomous?",
+          "type": "boolean",
+          "required": false,
+          "code": "clbAto",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        }
+      ]
+    },
+    {
+      "name": "Teleop - Active",
+      "fields": [
+        {
+          "title": "Fuel Scored",
+          "description": "How many fuel did they score? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "tScdFul",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "Fuel Missed",
+          "description": "How many shots did they miss? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "tMsdFul",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "Depot Collect",
+          "description": "How much fuel did they take from the depot? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "tDepGrb",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "HP Collect",
+          "description": "How much fuel did they take from the human player? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "tHPGrb",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "Fed HP",
+          "description": "How much fuel did they give to the human player? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "tHPGiv",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "HP Score",
+          "description": "How much fuel did the human player score? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "tHPScr",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "title": "HP Miss",
+          "description": "How many shots did the human player miss? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "tHPMis",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "title": "Neutral Zone Collect",
+          "description": "How much fuel did they take from the Neutral Zone? Don't worry if this is off by a bit.",
+          "type": "counter",
+          "required": false,
+          "code": "tNtrlZnGrb",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        }
+      ]
+    },
+    {
+      "name": "Teleop - Inactive",
+      "fields": [
+        {
+          "title": "Played Defense",
+          "description": "Did they play defense, and if so, how did they do?",
+          "type": "select",
+          "required": false,
+          "code": "dfnc",
+          "formResetBehavior": "reset",
+          "defaultValue": "",
+          "choices": {
+            "No": "Didn't Play Defense",
+            "Bad": "Played Bad Defense",
+            "Good": "Played Good Defense"
+          }
+        },
+        {
+          "title": "Gathered Fuel",
+          "description": "Gathered fuel for themselves while their hub was inactive.",
+          "type": "boolean",
+          "required": false,
+          "code": "gthWhlInctv",
           "formResetBehavior": "reset",
           "defaultValue": false
         }
@@ -428,11 +379,11 @@
           "formResetBehavior": "reset",
           "defaultValue": "No",
           "choices": {
-            "No": "Not Parked",
-            "P": "Parked",
-            "Sc": "High Hang",
-            "Dc": "Low Hang",
-            "Fc": "Failed Hang"
+            "No": "No Hang",
+            "L1": "Level 1",
+            "L2": "Level 2",
+            "L3": "Level 3",
+            "Fh": "Failed Hang"
           }
         },
         {

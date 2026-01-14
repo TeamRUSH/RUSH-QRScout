@@ -170,19 +170,12 @@
         },
         {
           "title": "Climbed Tower",
-          "description": "The height the robot climbed in auto",
-          "type": "select",
+          "description": "Check if the robot climbed in auto",
+          "type": "boolean",
           "required": false,
           "code": "climbedAuto",
           "formResetBehavior": "reset",
-          "defaultValue": "No",
-          "choices": {
-            "No": "Didn't Climb",
-            "L1": "Level 1",
-            "L2": "Level 2",
-            "L3": "Level 3",
-            "F": "Failed Climb"
-          }
+          "defaultValue": false
         },
         {
           "title": "Auto Fouls",

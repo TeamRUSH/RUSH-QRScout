@@ -203,11 +203,20 @@
           "defaultValue": false
         },
         {
-          "title": "Fuel Collected From Player",
+          "title": "Fuel Collected From HP",
           "description": "Collected fuel from the human player",
           "type": "boolean",
           "required": false,
-          "code": "FFHP",
+          "code": "FCHP",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+         {
+          "title": "Gave Fuel to HP",
+          "description": "Gave fuel to the human player",
+          "type": "boolean",
+          "required": false,
+          "code": "FGHP",
           "formResetBehavior": "reset",
           "defaultValue": false
         },

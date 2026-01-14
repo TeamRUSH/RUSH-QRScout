@@ -62,6 +62,15 @@
       "name": "Prematch",
       "fields": [
         {
+          "title": "Scouter Initials",
+          "description": "Enter the initials of the scouter.",
+          "type": "text",
+          "required": true,
+          "code": "scouter",
+          "formResetBehavior": "preserve",
+          "defaultValue": ""
+        },
+        {
           "title": "Match Number",
           "description": "Enter the match number.",
           "type": "number",
@@ -71,11 +80,28 @@
           "defaultValue": 1
         },
         {
+          "title": "Robot",
+          "description": "The robot you are scouting this match, based on driver station position.",
+          "type": "select",
+          "required": true,
+          "code": "robot",
+          "formResetBehavior": "preserve",
+          "defaultValue": "R1",
+          "choices": {
+            "R1": "Red 1",
+            "R2": "Red 2",
+            "R3": "Red 3",
+            "B1": "Blue 1",
+            "B2": "Blue 2",
+            "B3": "Blue 3"
+          }
+        },
+        {
           "title": "Team Number",
           "description": "The team number of the robot you're scouting.",
           "type": "number",
           "required": true,
-          "code": "robot",
+          "code": "teamNumber",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
@@ -86,35 +112,34 @@
           "description": "The starting position of the robot.",
           "type": "select",
           "required": true,
-          "code": "start_zone",
+          "code": "Prsp",
           "formResetBehavior": "reset",
           "defaultValue": "",
           "choices": {
-            "R1": "Z1",
-            "R2": "Z2",
-            "R3": "Z3",
-            "R4": "Z4",
-            "R5": "Z5",
-            "R6": "Z6"
+            "R1": "Outpost Side Trench",
+            "R2": "Outpost Side Bump",
+            "R3": "Hub",
+            "R4": "Depot Side Bump",
+            "R5": "Depot Side Trench"
           }
         },
         {
+          "title": "No Show",
+          "description": "Check if the robot did not show up for the match.",
+          "type": "boolean",
+          "required": false,
+          "code": "noShow",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
           "title": "Preload",
-          "description": "Did they pre load a coral in their robot?",
+          "description": "Check if the robot has preloaded any game pieces.",
           "type": "boolean",
           "required": false,
           "code": "preload",
           "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Deep Cage?",
-          "description": "Is this robot's cage starting low?",
-          "type": "boolean",
-          "required": false,
-          "code": "cage_down",
-          "formResetBehavior": "reset",
-          "defaultValue": false
+          "defaultValue": true
         }
       ]
     },

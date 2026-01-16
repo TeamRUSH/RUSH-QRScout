@@ -158,6 +158,60 @@
           "defaultValue": false
         },
         {
+          "title": "Fuel Collected From Ground",
+          "description": "Collected fuel from the ground",
+          "type": "boolean",
+          "required": false,
+          "code": "AFFG",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel Collected From HP",
+          "description": "Collected fuel from the human player",
+          "type": "boolean",
+          "required": false,
+          "code": "AFFHP",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+         {
+          "title": "Gave Fuel to HP",
+          "description": "Gave fuel to the human player",
+          "type": "boolean",
+          "required": false,
+          "code": "AFGHP",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel Collected From Depot",
+          "description": "Collected fuel from the depot",
+          "type": "boolean",
+          "required": false,
+          "code": "AFFD",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Drove Over Bump",
+          "description": "Drove over the bump",
+          "type": "boolean",
+          "required": false,
+          "code": "DOB",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Drove Under Trench",
+          "description": "Drove under the trench",
+          "type": "boolean",
+          "required": false,
+          "code": "DUT",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
           "title": "Fuel scored",
           "description": "The amount of fuel scored in auto",
           "type": "counter",
@@ -198,7 +252,7 @@
           "description": "Collected fuel from the ground",
           "type": "boolean",
           "required": false,
-          "code": "FFG",
+          "code": "TFFG",
           "formResetBehavior": "reset",
           "defaultValue": false
         },
@@ -207,7 +261,7 @@
           "description": "Collected fuel from the human player",
           "type": "boolean",
           "required": false,
-          "code": "FCHP",
+          "code": "TFFHP",
           "formResetBehavior": "reset",
           "defaultValue": false
         },
@@ -216,7 +270,7 @@
           "description": "Gave fuel to the human player",
           "type": "boolean",
           "required": false,
-          "code": "FGHP",
+          "code": "TFGHP",
           "formResetBehavior": "reset",
           "defaultValue": false
         },
@@ -225,7 +279,7 @@
           "description": "Collected fuel from the depot",
           "type": "boolean",
           "required": false,
-          "code": "FFD",
+          "code": "TFFD",
           "formResetBehavior": "reset",
           "defaultValue": false
         },
@@ -234,18 +288,7 @@
           "description": "The amount of fuel scored in teleop (by the robot)",
           "type": "counter",
           "required": false,
-          "code": "FIT",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Robot Fuel 'Scored'",
-          "description": "The amount of fuel scored in teleop (by the robot) while their hub was inactive",
-          "type": "counter",
-          "required": false,
-          "code": "FITWI",
+          "code": "TFIT",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,

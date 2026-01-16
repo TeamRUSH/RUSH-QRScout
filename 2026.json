@@ -314,7 +314,7 @@
           "defaultValue": false
         },
         {
-          "title": "Was Robot Defended by Other Alliance?",
+          "title": "Defended?",
           "type": "boolean",
           "required": false,
           "code": "DEFEg",

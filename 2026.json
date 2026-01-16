@@ -354,6 +354,7 @@
         },
         {
           "title": "Died?",
+          "description": "Check if the robot is not visually broken, but is unresponsive or immobile.",
           "type": "boolean",
           "required": false,
           "code": "DEg",
@@ -361,7 +362,17 @@
           "defaultValue": false
         },
         {
+          "title": "Broke?",
+          "description": "Check if the robot is visually broken.",
+          "type": "boolean",
+          "required": false,
+          "code": "BEg",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
           "title": "Tipped/Fell Over?",
+          "description": "Check if the robot tipped or fell over.",
           "type": "boolean",
           "required": false,
           "code": "TFOT",

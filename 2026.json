@@ -390,9 +390,9 @@
           "required": false,
           "code": "or",
           "formResetBehavior": "reset",
-          "defaultValue": 3,
-          "min": 1,
-          "max": 5,
+          "defaultValue": 5,
+          "min": 0,
+          "max": 10,
           "step": 1
         },
         {
@@ -401,9 +401,9 @@
           "required": false,
           "code": "dr",
           "formResetBehavior": "reset",
-          "defaultValue": 3,
-          "min": 1,
-          "max": 5,
+          "defaultValue": 5,
+          "min": 0,
+          "max": 10,
           "step": 1
         },
         {

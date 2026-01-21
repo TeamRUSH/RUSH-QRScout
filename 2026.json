@@ -241,6 +241,17 @@
           "defaultValue": 0,
           "min": 0,
           "step": 1
+        },
+        {
+          "title": "Auto score",
+          "description": "The total score of the alliance after autonomous",
+          "type": "number",
+          "required": true,
+          "code": "autoScore",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 19999
         }
       ]
     },
@@ -331,6 +342,39 @@
           "defaultValue": 0,
           "min": 0,
           "step": 1
+        },
+        {
+          "title": "Stage 1 score",
+          "description": "The total score of the alliance after stage 1.",
+          "type": "number",
+          "required": true,
+          "code": "stage1Score",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 19999
+        },
+        {
+          "title": "Stage 2 score",
+          "description": "The total score of the alliance after stage 1.",
+          "type": "number",
+          "required": true,
+          "code": "stage2Score",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 19999
+        },
+        {
+          "title": "Stage 3 score",
+          "description": "The total score of the alliance after stage 1.",
+          "type": "number",
+          "required": true,
+          "code": "stage3Score",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 19999
         }
       ]
     },

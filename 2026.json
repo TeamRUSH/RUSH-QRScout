@@ -263,7 +263,8 @@
           "required": false,
           "code": "TFFHP",
           "formResetBehavior": "reset",
-          "defaultValue": false
+          "defaultValue": false,
+          "step": 0.1
         },
          {
           "title": "Gave Fuel to HP",

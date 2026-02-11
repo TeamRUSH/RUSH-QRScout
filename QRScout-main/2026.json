@@ -293,15 +293,15 @@
           "defaultValue": false
         },
         {
-          "title": "Time Scoring",
-          "description": "The amount of time the robot spent scoring fuel (in seconds)",
+          "title": "Time Scoring (read desc)",
+          "description": "The amount of time the robot spent scoring fuel (in tenths of seconds, so a value of 10 means 1 second)",
           "type": "counter",
           "required": false,
           "code": "TS",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
-          "step": 0.1
+          "step": 1
         },
         {
           "title": "Human Fuel Scored",

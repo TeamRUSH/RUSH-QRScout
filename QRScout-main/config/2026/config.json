@@ -142,6 +142,17 @@
           "code": "preload",
           "formResetBehavior": "reset",
           "defaultValue": true
+        },
+        {
+          "title": "Fuel Per Second",
+          "description": "The teams' average Fuel Per Second.",
+          "type": "int",
+          "required": false,
+          "code": "TFIT",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
         }
       ]
     },
@@ -214,7 +225,7 @@
         {
           "title": "Fuel scored",
           "description": "The amount of fuel scored in auto",
-          "type": "counter",
+          "type": "int",
           "required": false,
           "code": "FIA",
           "formResetBehavior": "reset",
@@ -234,7 +245,7 @@
         {
           "title": "Auto Fouls",
           "description": "The number of fouls received in autonomous",
-          "type": "counter",
+          "type": "int",
           "required": false,
           "code": "auf",
           "formResetBehavior": "reset",
@@ -284,9 +295,9 @@
           "defaultValue": false
         },
         {
-          "title": "Robot Fuel Scored",
-          "description": "The amount of fuel scored in teleop (by the robot)",
-          "type": "counter",
+          "title": "Time Spent Scoring",
+          "description": "The amount of time (in seconds) spent scoring in teleop",
+          "type": "dec",
           "required": false,
           "code": "TFIT",
           "formResetBehavior": "reset",
@@ -297,7 +308,7 @@
         {
           "title": "Human Fuel Scored",
           "description": "The amount of fuel scored directly by the human player",
-          "type": "counter",
+          "type": "int",
           "required": false,
           "code": "HFS",
           "formResetBehavior": "reset",
@@ -324,7 +335,7 @@
         {
           "title": "Teleop Fouls",
           "description": "The number of fouls received in teleop",
-          "type": "counter",
+          "type": "int",
           "required": false,
           "code": "Fou/Tech",
           "formResetBehavior": "reset",

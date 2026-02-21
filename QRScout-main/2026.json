@@ -118,11 +118,11 @@
           "formResetBehavior": "reset",
           "defaultValue": "",
           "choices": {
-            "R1": "Outpost Side Trench",
-            "R2": "Outpost Side Bump",
-            "R3": "Hub",
-            "R4": "Depot Side Bump",
-            "R5": "Depot Side Trench"
+            "OT": "Outpost Side Trench",
+            "OB": "Outpost Side Bump",
+            "H": "Hub",
+            "DB": "Depot Side Bump",
+            "DT": "Depot Side Trench"
           }
         },
         {

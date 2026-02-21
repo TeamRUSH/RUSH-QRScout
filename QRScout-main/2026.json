@@ -145,12 +145,19 @@
         },
         {
           "title": "Fuel Per Second",
-          "description": "The robot's estimated fuel scoring rate.",
-          "type": "number",
+          "description": "The robot you are scouting's fuel per second.",
+          "type": "select",
           "required": true,
-          "code": "FPS",
+          "code": "fps",
           "formResetBehavior": "reset",
-          "defaultValue": 0
+          "defaultValue": "",
+          "choices": {
+            "Poor": "0 - 5",
+            "Low": "6 - 10",
+            "Med": "11 - 15",
+            "High": "16 - 20",
+            "Super": "21+"
+          }
         }
       ]
     },
@@ -214,15 +221,6 @@
           "step": 1
         },
         {
-          "title": "Climbed Tower",
-          "description": "Check if the robot climbed in auto",
-          "type": "boolean",
-          "required": false,
-          "code": "climbedAuto",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
           "title": "Auto Accuracy",
           "description": "The percentage of shots they took that went in during the Autonomous phase.",
           "type": "select",
@@ -236,6 +234,15 @@
             "Med": "50% - 75%",
             "High": "75% - 100%"
           }
+        },
+        {
+          "title": "Climbed Tower",
+          "description": "Check if the robot climbed in auto",
+          "type": "boolean",
+          "required": false,
+          "code": "climbedAuto",
+          "formResetBehavior": "reset",
+          "defaultValue": false
         }
       ]
     },
@@ -279,15 +286,15 @@
           "defaultValue": 0
         },
         {
-          "title": "Time Scoring (read desc)",
-          "description": "The amount of time the robot spent scoring fuel (in tenths of seconds, so a value of 10 means 1 second)",
-          "type": "number",
+          "title": "Fuel scored per cycle",
+          "description": "The amount of fuel scored in auto",
+          "type": "counter",
           "required": false,
-          "code": "TS",
+          "code": "FIT",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
-          "step": 1
+          "step": 10
         },
         {
           "title": "Human Fuel Scored",
@@ -299,14 +306,6 @@
           "defaultValue": 0,
           "min": 0,
           "step": 1
-        },
-        {
-          "title": "Crossed Field/Played Defense?",
-          "type": "boolean",
-          "required": false,
-          "code": "CFPDT",
-          "formResetBehavior": "reset",
-          "defaultValue": false
         },
         {
           "title": "Tele Accuracy",
@@ -322,6 +321,14 @@
             "Med": "50% - 75%",
             "High": "75% - 100%"
           }
+        },
+        {
+          "title": "Crossed Field/Played Defense?",
+          "type": "boolean",
+          "required": false,
+          "code": "CFPDT",
+          "formResetBehavior": "reset",
+          "defaultValue": false
         }
       ]
     },

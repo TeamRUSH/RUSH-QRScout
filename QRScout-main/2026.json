@@ -142,22 +142,6 @@
           "code": "preload",
           "formResetBehavior": "reset",
           "defaultValue": true
-        },
-        {
-          "title": "Fuel Per Second",
-          "description": "The robot you are scouting's fuel per second.",
-          "type": "select",
-          "required": true,
-          "code": "fps",
-          "formResetBehavior": "reset",
-          "defaultValue": "",
-          "choices": {
-            "Poor": "0 - 5",
-            "Low": "6 - 10",
-            "Med": "11 - 15",
-            "High": "16 - 20",
-            "Super": "21+"
-          }
         }
       ]
     },
@@ -326,6 +310,22 @@
     {
       "name": "Postmatch",
       "fields": [
+        {
+          "title": "Fuel Per Second",
+          "description": "The robot you are scouting's fuel per second.",
+          "type": "select",
+          "required": true,
+          "code": "fps",
+          "formResetBehavior": "reset",
+          "defaultValue": "",
+          "choices": {
+            "Poor": "0 - 5",
+            "Low": "6 - 10",
+            "Med": "11 - 15",
+            "High": "16 - 20",
+            "Super": "21+"
+          }
+        },
         {
           "title": "Offense Skill",
           "type": "range",

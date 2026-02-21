@@ -192,24 +192,6 @@
           "defaultValue": false
         },
         {
-          "title": "Drove Over Bump",
-          "description": "Drove over the bump",
-          "type": "boolean",
-          "required": false,
-          "code": "DOB",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Drove Under Trench",
-          "description": "Drove under the trench",
-          "type": "boolean",
-          "required": false,
-          "code": "DUT",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
           "title": "Fuel scored",
           "description": "The amount of fuel scored in auto",
           "type": "counter",
@@ -385,6 +367,24 @@
           "min": 0,
           "max": 10,
           "step": 1
+        },
+        {
+          "title": "Drove Over Bump",
+          "description": "Drove over the bump",
+          "type": "boolean",
+          "required": false,
+          "code": "DOB",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Drove Under Trench",
+          "description": "Drove under the trench",
+          "type": "boolean",
+          "required": false,
+          "code": "DUT",
+          "formResetBehavior": "reset",
+          "defaultValue": false
         },
         {
           "title": "Comments",

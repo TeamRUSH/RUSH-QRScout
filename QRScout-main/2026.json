@@ -331,15 +331,6 @@
             "L3": "Level 3",
             "F": "Failed Climb"
           }
-        },
-        {
-          "title": "Died?",
-          "description": "Check if the robot is broken in any way.",
-          "type": "boolean",
-          "required": false,
-          "code": "DEg",
-          "formResetBehavior": "reset",
-          "defaultValue": false
         }
       ]
     },
@@ -383,6 +374,15 @@
           "type": "boolean",
           "required": false,
           "code": "DUT",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Died?",
+          "description": "Check if the robot is broken in any way.",
+          "type": "boolean",
+          "required": false,
+          "code": "Dead (💀)",
           "formResetBehavior": "reset",
           "defaultValue": false
         },

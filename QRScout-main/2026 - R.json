@@ -1,0 +1,393 @@
+{
+  "title": "RUSH Scout",
+  "page_title": "RUSH Scout 2026",
+  "delimiter": "\t",
+  "teamNumber": 27,
+  "theme": {
+    "light": {
+      "background": "48 100% 51%",
+      "foreground": "0 0% 3.9%",
+      "card": "0 0% 100%",
+      "card_foreground": "0 0% 3.9%",
+      "popover": "0 0% 100%",
+      "popover_foreground": "0 0% 3.9%",
+      "primary": "210 100% 25%",
+      "primary_foreground": "0 85.7% 97.3%",
+      "secondary": "0 0% 96.1%",
+      "secondary_foreground": "0 0% 9%",
+      "muted": "0 0% 96.1%",
+      "muted_foreground": "0 0% 45.1%",
+      "accent": "0 0% 96.1%",
+      "accent_foreground": "0 0% 9%",
+      "destructive": "358 85% 52%",
+      "destructive_foreground": "0 0% 98%",
+      "border": "0 0% 89.8%",
+      "input": "0 0% 89.8%",
+      "ring": "354.44 71.3% 47.9%",
+      "chart_1": "12 76% 61%",
+      "chart_2": "173 58% 39%",
+      "chart_3": "197 37% 24%",
+      "chart_4": "43 74% 66%",
+      "chart_5": "27 87% 67%"
+    },
+    "dark": {
+      "background": "0 0% 3.9%",
+      "foreground": "0 0% 98%",
+      "card": "0 0% 3.9%",
+      "card_foreground": "0 0% 98%",
+      "popover": "0 0% 3.9%",
+      "popover_foreground": "0 0% 98%",
+      "primary": "210 100% 25%",
+      "primary_foreground": "0 85.7% 97.3%",
+      "secondary": "0 0% 14.9%",
+      "secondary_foreground": "0 0% 98%",
+      "muted": "0 0% 14.9%",
+      "muted_foreground": "0 0% 63.9%",
+      "accent": "0 0% 14.9%",
+      "accent_foreground": "0 0% 98%",
+      "destructive": "48 100% 51%",
+      "destructive_foreground": "0 0% 3.9%",
+      "border": "0 0% 14.9%",
+      "input": "0 0% 14.9%",
+      "ring": "354.44 71.3% 47.9%",
+      "chart_1": "220 70% 50%",
+      "chart_2": "160 60% 45%",
+      "chart_3": "30 80% 55%",
+      "chart_4": "280 65% 60%",
+      "chart_5": "340 75% 55%"
+    }
+  },
+  "sections": [
+    {
+      "name": "Prematch",
+      "fields": [
+        {
+          "title": "Scouter Number",
+          "description": "Enter your team number.",
+          "type": "number",
+          "required": true,
+          "code": "scouter",
+          "formResetBehavior": "preserve",
+          "defaultValue": 1,
+          "min": 1,
+          "max": 33
+        },
+        {
+          "title": "Match Number",
+          "description": "Enter the match number.",
+          "type": "number",
+          "required": true,
+          "code": "matchNumber",
+          "formResetBehavior": "increment",
+          "defaultValue": 1
+        },
+        {
+          "title": "Robot",
+          "description": "The robot you are scouting this match, based on driver station position.",
+          "type": "select",
+          "required": true,
+          "code": "robot",
+          "formResetBehavior": "preserve",
+          "defaultValue": "R1",
+          "choices": {
+            "R1": "Red 1",
+            "R2": "Red 2",
+            "R3": "Red 3",
+            "B1": "Blue 1",
+            "B2": "Blue 2",
+            "B3": "Blue 3"
+          }
+        },
+        {
+          "title": "Team Number",
+          "description": "The team number of the robot you're scouting.",
+          "type": "number",
+          "required": true,
+          "code": "teamNumber",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 19999
+        },
+        {
+          "title": "Starting Position",
+          "description": "The starting position of the robot.",
+          "type": "select",
+          "required": true,
+          "code": "Prsp",
+          "formResetBehavior": "reset",
+          "defaultValue": "",
+          "choices": {
+            "R1": "Outpost Side Trench",
+            "R2": "Outpost Side Bump",
+            "R3": "Hub",
+            "R4": "Depot Side Bump",
+            "R5": "Depot Side Trench"
+          }
+        },
+        {
+          "title": "No Show",
+          "description": "Check if the robot did not show up for the match.",
+          "type": "boolean",
+          "required": false,
+          "code": "noShow",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Preload",
+          "description": "Check if the robot has preloaded any game pieces.",
+          "type": "boolean",
+          "required": false,
+          "code": "preload",
+          "formResetBehavior": "reset",
+          "defaultValue": true
+        },
+        {
+          "title": "Fuel Per Second",
+          "description": "The robot you are scouting's fuel per second.",
+          "type": "select",
+          "required": true,
+          "code": "fps",
+          "formResetBehavior": "reset",
+          "defaultValue": "",
+          "choices": {
+            "Poor": "0 - 5",
+            "Low": "6 - 10",
+            "Med": "11 - 15",
+            "High": "16 - 20",
+            "Super": "21+"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Autonomous",
+      "fields": [
+        {
+          "title": "Fuel Collected From Ground",
+          "description": "Collected fuel from the ground",
+          "type": "boolean",
+          "required": false,
+          "code": "AFFG",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel Collected From HP",
+          "description": "Collected fuel from the human player",
+          "type": "boolean",
+          "required": false,
+          "code": "AFFHP",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel Collected From Depot",
+          "description": "Collected fuel from the depot",
+          "type": "boolean",
+          "required": false,
+          "code": "AFFD",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Drove Over Bump",
+          "description": "Drove over the bump",
+          "type": "boolean",
+          "required": false,
+          "code": "DOB",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Drove Under Trench",
+          "description": "Drove under the trench",
+          "type": "boolean",
+          "required": false,
+          "code": "DUT",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel scored",
+          "description": "The amount of fuel scored in auto",
+          "type": "counter",
+          "required": false,
+          "code": "FIA",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "title": "Climbed Tower",
+          "description": "Check if the robot climbed in auto",
+          "type": "boolean",
+          "required": false,
+          "code": "climbedAuto",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Auto Accuracy",
+          "description": "The percentage of shots they took that went in during the Autonomous phase.",
+          "type": "select",
+          "required": true,
+          "code": "Aaccy",
+          "formResetBehavior": "reset",
+          "defaultValue": "",
+          "choices": {
+            "Poor": "0% - 25%",
+            "Low": "25% - 50%",
+            "Med": "50% - 75%",
+            "High": "75% - 100%"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Teleop",
+      "fields": [
+        {
+          "title": "Fuel Collected From Ground",
+          "description": "Collected fuel from the ground",
+          "type": "boolean",
+          "required": false,
+          "code": "TFFG",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel Collected From HP",
+          "description": "Collected fuel from the human player",
+          "type": "boolean",
+          "required": false,
+          "code": "TFFHP",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel Collected From Depot",
+          "description": "Collected fuel from the depot",
+          "type": "boolean",
+          "required": false,
+          "code": "TFFD",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Time Scoring (read desc)",
+          "description": "The amount of time the robot spent scoring fuel (in tenths of seconds, so a value of 10 means 1 second)",
+          "type": "number",
+          "required": false,
+          "code": "TS",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "title": "Human Fuel Scored",
+          "description": "The amount of fuel scored directly by the human player",
+          "type": "counter",
+          "required": false,
+          "code": "HFS",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "title": "Crossed Field/Played Defense?",
+          "type": "boolean",
+          "required": false,
+          "code": "CFPDT",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Tele Accuracy",
+          "description": "The percentage of shots they took that went in during the Tele-Op phase.",
+          "type": "select",
+          "required": true,
+          "code": "Aaccy",
+          "formResetBehavior": "reset",
+          "defaultValue": "",
+          "choices": {
+            "Poor": "0% - 25%",
+            "Low": "25% - 50%",
+            "Med": "50% - 75%",
+            "High": "75% - 100%"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Endgame",
+      "fields": [
+        {
+          "title": "Climbed Tower",
+          "type": "select",
+          "required": true,
+          "code": "climbed",
+          "formResetBehavior": "reset",
+          "defaultValue": "No",
+          "choices": {
+            "No": "Didn't Climb",
+            "L1": "Level 1",
+            "L2": "Level 2",
+            "L3": "Level 3",
+            "F": "Failed Climb"
+          }
+        },
+        {
+          "title": "Died?",
+          "description": "Check if the robot is broken in any way.",
+          "type": "boolean",
+          "required": false,
+          "code": "DEg",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        }
+      ]
+    },
+    {
+      "name": "Postmatch",
+      "fields": [
+        {
+          "title": "Offense Skill",
+          "type": "range",
+          "required": false,
+          "code": "or",
+          "formResetBehavior": "reset",
+          "defaultValue": 5,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "title": "Defensive Skill",
+          "type": "range",
+          "required": false,
+          "code": "dr",
+          "formResetBehavior": "reset",
+          "defaultValue": 5,
+          "min": 0,
+          "max": 10,
+          "step": 1
+        },
+        {
+          "title": "Comments",
+          "type": "text",
+          "required": false,
+          "code": "co",
+          "formResetBehavior": "reset",
+          "defaultValue": "",
+          "min": 0,
+          "max": 100
+        }
+      ]
+    }
+  ]
+}

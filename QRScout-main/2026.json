@@ -272,7 +272,7 @@
         {
           "title": "Time Scoring (read desc)",
           "description": "The amount of time the robot spent scoring fuel (in tenths of seconds, so a value of 10 means 1 second)",
-          "type": "counter",
+          "type": "number",
           "required": false,
           "code": "TS",
           "formResetBehavior": "reset",

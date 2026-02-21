@@ -277,6 +277,15 @@
           "defaultValue": false
         },
         {
+          "title": "Cycles Completed",
+          "description": "The cycles completed by the robot",
+          "type": "counter",
+          "required": false,
+          "code": "cycles",
+          "formResetBehavior": "reset",
+          "defaultValue": 0
+        },
+        {
           "title": "Time Scoring (read desc)",
           "description": "The amount of time the robot spent scoring fuel (in tenths of seconds, so a value of 10 means 1 second)",
           "type": "number",
@@ -311,7 +320,7 @@
           "description": "The percentage of shots they took that went in during the Tele-Op phase.",
           "type": "select",
           "required": true,
-          "code": "Aaccy",
+          "code": "Taccy",
           "formResetBehavior": "reset",
           "defaultValue": "",
           "choices": {

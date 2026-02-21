@@ -158,15 +158,6 @@
       "name": "Autonomous",
       "fields": [
         {
-          "title": "Moved?",
-          "description": "Check if the robot moved during autonomous.",
-          "type": "boolean",
-          "required": false,
-          "code": "Mved",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
           "title": "Fuel Collected From Ground",
           "description": "Collected fuel from the ground",
           "type": "boolean",
@@ -181,15 +172,6 @@
           "type": "boolean",
           "required": false,
           "code": "AFFHP",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-         {
-          "title": "Gave Fuel to HP",
-          "description": "Gave fuel to the human player",
-          "type": "boolean",
-          "required": false,
-          "code": "AFGHP",
           "formResetBehavior": "reset",
           "defaultValue": false
         },
@@ -241,15 +223,19 @@
           "defaultValue": false
         },
         {
-          "title": "Auto Fouls",
-          "description": "The number of fouls received in autonomous",
-          "type": "counter",
-          "required": false,
-          "code": "auf",
+          "title": "Auto Accuracy",
+          "description": "The percentage of shots they took that went in during the Autonomous phase.",
+          "type": "select",
+          "required": true,
+          "code": "Aaccy",
           "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
+          "defaultValue": "",
+          "choices": {
+            "Poor": "0% - 25%",
+            "Low": "25% - 50%",
+            "Med": "50% - 75%",
+            "High": "75% - 100%"
+          }
         }
       ]
     },
@@ -271,15 +257,6 @@
           "type": "boolean",
           "required": false,
           "code": "TFFHP",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-         {
-          "title": "Gave Fuel to HP",
-          "description": "Gave fuel to the human player",
-          "type": "boolean",
-          "required": false,
-          "code": "TFGHP",
           "formResetBehavior": "reset",
           "defaultValue": false
         },
@@ -323,23 +300,19 @@
           "defaultValue": false
         },
         {
-          "title": "Defended?",
-          "type": "boolean",
-          "required": false,
-          "code": "DEFEg",
+          "title": "Tele Accuracy",
+          "description": "The percentage of shots they took that went in during the Tele-Op phase.",
+          "type": "select",
+          "required": true,
+          "code": "Aaccy",
           "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Teleop Fouls",
-          "description": "The number of fouls received in teleop",
-          "type": "counter",
-          "required": false,
-          "code": "Fou/Tech",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
+          "defaultValue": "",
+          "choices": {
+            "Poor": "0% - 25%",
+            "Low": "25% - 50%",
+            "Med": "50% - 75%",
+            "High": "75% - 100%"
+          }
         }
       ]
     },
@@ -363,28 +336,10 @@
         },
         {
           "title": "Died?",
-          "description": "Check if the robot is not visually broken, but is unresponsive or immobile.",
+          "description": "Check if the robot is broken in any way.",
           "type": "boolean",
           "required": false,
           "code": "DEg",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Broke?",
-          "description": "Check if the robot is visually broken.",
-          "type": "boolean",
-          "required": false,
-          "code": "BEg",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Tipped/Fell Over?",
-          "description": "Check if the robot tipped or fell over.",
-          "type": "boolean",
-          "required": false,
-          "code": "TFOT",
           "formResetBehavior": "reset",
           "defaultValue": false
         }
@@ -414,19 +369,6 @@
           "min": 0,
           "max": 10,
           "step": 1
-        },
-        {
-          "title": "Yellow/Red Card",
-          "type": "select",
-          "required": true,
-          "code": "crd",
-          "formResetBehavior": "reset",
-          "defaultValue": "No Card",
-          "choices": {
-            "No Card": "No Card",
-            "Yellow": "Yellow Card",
-            "Red": "Red Card"
-          }
         },
         {
           "title": "Comments",

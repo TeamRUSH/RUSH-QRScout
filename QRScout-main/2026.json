@@ -149,8 +149,56 @@
       "name": "Autonomous",
       "fields": [
         {
-          "title": "Fuel Collected From Ground",
-          "description": "Collected fuel from the ground",
+          "title": "Fuel scored (Groups of 1)",
+          "description": "The amount of fuel scored in auto, in steps of 1",
+          "type": "counter",
+          "required": false,
+          "code": "FIA1",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
+        {
+          "title": "Fuel scored (Groups of 5)",
+          "description": "The amount of fuel scored in auto, in steps of 5",
+          "type": "counter",
+          "required": false,
+          "code": "FIA5",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "Fuel scored (Groups of 10)",
+          "description": "The amount of fuel scored in auto, in steps of 10",
+          "type": "counter",
+          "required": false,
+          "code": "FIA10",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 10
+        },
+        {
+          "title": "Auto Accuracy",
+          "description": "The percentage of shots they took that went in during the Autonomous phase.",
+          "type": "select",
+          "required": true,
+          "code": "Aaccy",
+          "formResetBehavior": "reset",
+          "defaultValue": "",
+          "choices": {
+            "Poor": "0% - 25%",
+            "Low": "25% - 50%",
+            "Med": "50% - 75%",
+            "High": "75% - 100%"
+          }
+        },
+        {
+          "title": "Fuel Collected From Neutral Zone",
+          "description": "Collected fuel from the Neutral Zone",
           "type": "boolean",
           "required": false,
           "code": "AFFG",
@@ -176,22 +224,76 @@
           "defaultValue": false
         },
         {
-          "title": "Fuel scored",
-          "description": "The amount of fuel scored in auto",
+          "title": "Climbed Tower",
+          "description": "Check if the robot climbed in auto",
+          "type": "boolean",
+          "required": false,
+          "code": "climbedAuto",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Drove Over Bump",
+          "description": "Drove over the bump",
+          "type": "boolean",
+          "required": false,
+          "code": "DOBA",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Drove Under Trench",
+          "description": "Drove under the trench",
+          "type": "boolean",
+          "required": false,
+          "code": "DUTA",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        }
+      ]
+    },
+    {
+      "name": "Teleop",
+      "fields": [
+        {
+          "title": "Fuel scored (Groups of 1)",
+          "description": "The amount of fuel scored in auto, in steps of 1",
           "type": "counter",
           "required": false,
-          "code": "FIA",
+          "code": "FIT1",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
           "step": 1
         },
         {
-          "title": "Auto Accuracy",
-          "description": "The percentage of shots they took that went in during the Autonomous phase.",
+          "title": "Fuel scored (Groups of 5)",
+          "description": "The amount of fuel scored in auto, in steps of 5",
+          "type": "counter",
+          "required": false,
+          "code": "FIT5",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "Fuel scored (Groups of 10)",
+          "description": "The amount of fuel scored in auto, in steps of 10",
+          "type": "counter",
+          "required": false,
+          "code": "FIT10",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 10
+        },
+        {
+          "title": "Tele Accuracy",
+          "description": "The percentage of shots they took that went in during the Tele-Op phase.",
           "type": "select",
           "required": true,
-          "code": "Aaccy",
+          "code": "Taccy",
           "formResetBehavior": "reset",
           "defaultValue": "",
           "choices": {
@@ -202,22 +304,41 @@
           }
         },
         {
-          "title": "Climbed Tower",
-          "description": "Check if the robot climbed in auto",
-          "type": "boolean",
+          "title": "Fuel passed (Groups of 1)",
+          "description": "The amount of fuel passed in auto, in steps of 1",
+          "type": "counter",
           "required": false,
-          "code": "climbedAuto",
+          "code": "FPIT1",
           "formResetBehavior": "reset",
-          "defaultValue": false
-        }
-      ]
-    },
-    {
-      "name": "Teleop",
-      "fields": [
+          "defaultValue": 0,
+          "min": 0,
+          "step": 1
+        },
         {
-          "title": "Fuel Collected From Ground",
-          "description": "Collected fuel from the ground",
+          "title": "Fuel passed (Groups of 5)",
+          "description": "The amount of fuel passed in auto, in steps of 5",
+          "type": "counter",
+          "required": false,
+          "code": "FPIT5",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 5
+        },
+        {
+          "title": "Fuel passed (Groups of 10)",
+          "description": "The amount of fuel passed in auto, in steps of 10",
+          "type": "counter",
+          "required": false,
+          "code": "FPIT10",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "step": 10
+        },
+        {
+          "title": "Fuel Collected From Neutral Zone",
+          "description": "Collected fuel from the Neutral Zone",
           "type": "boolean",
           "required": false,
           "code": "TFFG",
@@ -243,45 +364,28 @@
           "defaultValue": false
         },
         {
-          "title": "Cycles Completed",
-          "description": "The cycles completed by the robot",
-          "type": "counter",
-          "required": false,
-          "code": "cycles",
-          "formResetBehavior": "reset",
-          "defaultValue": 0
-        },
-        {
-          "title": "Fuel scored per cycle",
-          "description": "The amount of fuel scored in auto",
-          "type": "counter",
-          "required": false,
-          "code": "FIT",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 10
-        },
-        {
-          "title": "Tele Accuracy",
-          "description": "The percentage of shots they took that went in during the Tele-Op phase.",
-          "type": "select",
-          "required": true,
-          "code": "Taccy",
-          "formResetBehavior": "reset",
-          "defaultValue": "",
-          "choices": {
-            "Poor": "0% - 25%",
-            "Low": "25% - 50%",
-            "Med": "50% - 75%",
-            "High": "75% - 100%"
-          }
-        },
-        {
           "title": "Crossed Field/Played Defense?",
           "type": "boolean",
           "required": false,
           "code": "CFPDT",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Drove Over Bump",
+          "description": "Drove over the bump",
+          "type": "boolean",
+          "required": false,
+          "code": "DOBT",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Drove Under Trench",
+          "description": "Drove under the trench",
+          "type": "boolean",
+          "required": false,
+          "code": "DUTT",
           "formResetBehavior": "reset",
           "defaultValue": false
         }
@@ -303,6 +407,31 @@
             "L2": "Level 2",
             "L3": "Level 3",
             "F": "Failed Climb"
+          }
+        },
+        {
+          "title": "Time When Started Climb",
+          "description": "The time remaining on the clock when the robot began climbing.",
+          "type": "number",
+          "required": false,
+          "code": "timeDead",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 150
+        },
+        {
+          "title": "Action If Didn't Climb",
+          "type": "select",
+          "required": true,
+          "code": "AltAction",
+          "formResetBehavior": "reset",
+          "defaultValue": "NA",
+          "choices": {
+            "NA": "N/A",
+            "D": "Defended",
+            "KS": "Kept Scoring",
+            "N": "Just Sat There"
           }
         }
       ]
@@ -327,51 +456,66 @@
           }
         },
         {
-          "title": "Offense Skill",
+          "title": "Driving Skill",
           "type": "range",
           "required": false,
-          "code": "or",
+          "code": "ds",
           "formResetBehavior": "reset",
-          "defaultValue": 5,
+          "defaultValue": 3,
           "min": 0,
-          "max": 10,
+          "max": 5,
+          "step": 1
+        },
+        {
+          "title": "Speed Skill",
+          "type": "range",
+          "required": false,
+          "code": "ss",
+          "formResetBehavior": "reset",
+          "defaultValue": 3,
+          "min": 0,
+          "max": 5,
           "step": 1
         },
         {
           "title": "Defensive Skill",
           "type": "range",
           "required": false,
-          "code": "dr",
+          "code": "ds",
           "formResetBehavior": "reset",
-          "defaultValue": 5,
+          "defaultValue": 3,
           "min": 0,
-          "max": 10,
+          "max": 5,
           "step": 1
         },
         {
-          "title": "Drove Over Bump",
-          "description": "Drove over the bump",
-          "type": "boolean",
+          "title": "Partner Skill",
+          "type": "range",
           "required": false,
-          "code": "DOB",
+          "code": "ps",
           "formResetBehavior": "reset",
-          "defaultValue": false
+          "defaultValue": 3,
+          "min": 0,
+          "max": 5,
+          "step": 1
         },
         {
-          "title": "Drove Under Trench",
-          "description": "Drove under the trench",
-          "type": "boolean",
+          "title": "Time Of Loss Of Function",
+          "description": "The amount of time during which the robot was inoperable in any way.",
+          "type": "number",
           "required": false,
-          "code": "DUT",
+          "code": "timeDead",
           "formResetBehavior": "reset",
-          "defaultValue": false
+          "defaultValue": 0,
+          "min": 0,
+          "max": 150
         },
         {
-          "title": "Died?",
-          "description": "Check if the robot is broken in any way.",
+          "title": "2+ Penalties",
+          "description": "Did they get more than 2 penalties in the whole match?",
           "type": "boolean",
           "required": false,
-          "code": "Dead (💀)",
+          "code": "M2P",
           "formResetBehavior": "reset",
           "defaultValue": false
         },

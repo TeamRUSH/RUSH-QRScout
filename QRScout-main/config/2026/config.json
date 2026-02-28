@@ -239,8 +239,8 @@
           "step": 10
         },
         {
-          "title": "Fuel scored",
-          "description": "The amount of fuel scored in teleop",
+          "title": "Fuel passed",
+          "description": "The amount of fuel passed in teleop",
           "type": "triple",
           "required": false,
           "code": "FPIT",

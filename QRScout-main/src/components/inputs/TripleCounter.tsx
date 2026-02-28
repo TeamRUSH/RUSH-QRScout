@@ -63,23 +63,23 @@ export default function DecCounterInput(props: ConfigurableInputProps) {
 
   return (
     <div className="my-2 flex flex-row items-center justify-center">
-      <Button onClick={() => handleChange(-(data.step3 || 10))}>
+      <Button size={"sm"} onClick={() => handleChange(-(data.step3 || 10))}>
         <Rewind />
       </Button>
-      <Button onClick={() => handleChange(-(data.step2 || 5))}>
+      <Button size={"sm"} onClick={() => handleChange(-(data.step2 || 5))}>
         <ChevronsLeft />
       </Button>
-      <Button onClick={() => handleChange(-(data.step1 || 1))}>
+      <Button size={"sm"} onClick={() => handleChange(-(data.step1 || 1))}>
         <ChevronLeft />
       </Button>
       <h2 className="px-4 text-2xl dark:text-white">{value}</h2>
-      <Button onClick={() => handleChange(data.step1 || 1)}>
+      <Button size={"sm"} onClick={() => handleChange(data.step1 || 1)}>
         <ChevronRight />
       </Button>
-      <Button onClick={() => handleChange(data.step2 || 5)}>
+      <Button size={"sm"} onClick={() => handleChange(data.step2 || 5)}>
         <ChevronsRight />
       </Button>
-      <Button onClick={() => handleChange(data.step3 || 10)}>
+      <Button size={"sm"} onClick={() => handleChange(data.step3 || 10)}>
         <FastForward />
       </Button>
     </div>

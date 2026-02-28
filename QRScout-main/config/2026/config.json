@@ -132,48 +132,17 @@
       "name": "Autonomous",
       "fields": [
         {
-          "title": "Fuel scored (Groups of 1)",
-          "description": "The amount of fuel scored in auto, in steps of 1",
-          "type": "int",
+          "title": "Fuel scored",
+          "description": "The amount of fuel scored in auto",
+          "type": "triple",
           "required": false,
-          "code": "FIA1",
+          "code": "FIA",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Fuel scored (Groups of 5)",
-          "description": "The amount of fuel scored in auto, in steps of 5",
-          "type": "int",
-          "required": false,
-          "code": "FIA5",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 5
-        },
-        {
-          "title": "Fuel scored (Groups of 10)",
-          "description": "The amount of fuel scored in auto, in steps of 10",
-          "type": "int",
-          "required": false,
-          "code": "FIA10",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 10
-        },
-        {
-          "title": "Fuel scored w/ multi steps",
-          "description": "The amount of fuel scored in auto, in steps of 10",
-          "type": "dec",
-          "required": false,
-          "code": "FIAT",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 1
+          "step1": 1,
+          "step2": 5,
+          "step3": 10
         },
         {
           "title": "Accuracy",
@@ -246,37 +215,17 @@
       "name": "Teleop",
       "fields": [
         {
-          "title": "Fuel scored (Groups of 1)",
-          "description": "The amount of fuel scored in auto, in steps of 1",
-          "type": "int",
+          "title": "Fuel scored",
+          "description": "The amount of fuel scored in teleop",
+          "type": "triple",
           "required": false,
-          "code": "FIT1",
+          "code": "FSIT",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Fuel scored (Groups of 5)",
-          "description": "The amount of fuel scored in auto, in steps of 5",
-          "type": "int",
-          "required": false,
-          "code": "FIT5",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 5
-        },
-        {
-          "title": "Fuel scored (Groups of 10)",
-          "description": "The amount of fuel scored in auto, in steps of 10",
-          "type": "int",
-          "required": false,
-          "code": "FIT10",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 10
+          "step1": 1,
+          "step2": 5,
+          "step3": 10
         },
         {
           "title": "Accuracy",
@@ -290,37 +239,17 @@
           "step": 10
         },
         {
-          "title": "Fuel passed (Groups of 1)",
-          "description": "The amount of fuel passed in auto, in steps of 1",
-          "type": "int",
+          "title": "Fuel scored",
+          "description": "The amount of fuel scored in teleop",
+          "type": "triple",
           "required": false,
-          "code": "FPIT1",
+          "code": "FPIT",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
-          "step": 1
-        },
-        {
-          "title": "Fuel passed (Groups of 5)",
-          "description": "The amount of fuel passed in auto, in steps of 5",
-          "type": "int",
-          "required": false,
-          "code": "FPIT5",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 5
-        },
-        {
-          "title": "Fuel passed (Groups of 10)",
-          "description": "The amount of fuel passed in auto, in steps of 10",
-          "type": "int",
-          "required": false,
-          "code": "FPIT10",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "step": 10
+          "step1": 1,
+          "step2": 5,
+          "step3": 10
         },
         {
           "title": "Fuel Collected From Neutral Zone",

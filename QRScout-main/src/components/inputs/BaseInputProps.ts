@@ -7,8 +7,9 @@ export const inputTypeSchema = z
     'boolean',
     'range',
     'select',
-    'int',
-    'dec',
+    'single',
+    'double',
+    'triple',
     'timer',
     'multi-select',
     'image',
@@ -58,16 +59,27 @@ export const multiSelectInputSchema = inputBaseSchema.extend({
   defaultValue: z.array(z.string()).optional().describe('The default value'),
 });
 
-export const decInputSchema = inputBaseSchema.extend({
-  type: z.literal('dec'),
+export const tripleInputSchema = inputBaseSchema.extend({
+  type: z.literal('triple'),
   min: z.number().optional().describe('The minimum value'),
   max: z.number().optional().describe('The maximum value'),
-  step: z.number().optional().describe('The step value').default(1),
+  step1: z.number().optional().describe('The step value for the small increase').default(1),
+  step2: z.number().optional().describe('The step value for the middle increase').default(1),
+  step3: z.number().optional().describe('The step value for the large increase').default(1),
   defaultValue: z.number().default(0).describe('The default value'),
 });
 
-export const intInputSchema = inputBaseSchema.extend({
-  type: z.literal('int'),
+export const doubleInputSchema = inputBaseSchema.extend({
+  type: z.literal('double'),
+  min: z.number().optional().describe('The minimum value'),
+  max: z.number().optional().describe('The maximum value'),
+  step1: z.number().optional().describe('The step value for the small increase').default(1),
+  step2: z.number().optional().describe('The step value for the large increase').default(1),
+  defaultValue: z.number().default(0).describe('The default value'),
+});
+
+export const singleInputSchema = inputBaseSchema.extend({
+  type: z.literal('single'),
   min: z.number().optional().describe('The minimum value'),
   max: z.number().optional().describe('The maximum value'),
   step: z.number().optional().describe('The step value').default(1),
@@ -111,8 +123,9 @@ export const sectionSchema = z.object({
   name: z.string(),
   fields: z.array(
     z.discriminatedUnion('type', [
-      intInputSchema,
-      decInputSchema,
+      singleInputSchema,
+      doubleInputSchema,
+      tripleInputSchema,
       stringInputSchema,
       numberInputSchema,
       selectInputSchema,
@@ -257,8 +270,9 @@ export type SelectInputData = z.infer<typeof selectInputSchema>;
 export type MultiSelectInputData = z.infer<typeof multiSelectInputSchema>;
 export type StringInputData = z.infer<typeof stringInputSchema>;
 export type NumberInputData = z.infer<typeof numberInputSchema>;
-export type DecInputData = z.infer<typeof decInputSchema>;
-export type IntInputData = z.infer<typeof intInputSchema>;
+export type singleInputData = z.infer<typeof singleInputSchema>;
+export type doubleInputData = z.infer<typeof doubleInputSchema>;
+export type tripleInputData = z.infer<typeof tripleInputSchema>;
 export type RangeInputData = z.infer<typeof rangeInputSchema>;
 export type BooleanInputData = z.infer<typeof booleanInputSchema>;
 export type TimerInputData = z.infer<typeof timerInputSchema>;
@@ -271,8 +285,9 @@ export type InputPropsMap = {
   range: RangeInputData;
   select: SelectInputData;
   'multi-select': MultiSelectInputData;
-  int: IntInputData;
-  dec: DecInputData;
+  single: singleInputData;
+  double: doubleInputData;
+  triple: tripleInputData;
   timer: TimerInputData;
   image: ImageInputData;
 };

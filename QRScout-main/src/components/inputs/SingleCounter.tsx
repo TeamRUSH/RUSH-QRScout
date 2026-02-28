@@ -3,12 +3,12 @@ import { useEvent } from '@/hooks';
 import { inputSelector, updateValue, useQRScoutState } from '@/store/store';
 import { Minus, Plus } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
-import { IntInputData } from './BaseInputProps';
+import { singleInputData } from './BaseInputProps';
 import { ConfigurableInputProps } from './ConfigurableInput';
 
 export default function CounterInput(props: ConfigurableInputProps) {
   const data = useQRScoutState(
-    inputSelector<IntInputData>(props.section, props.code),
+    inputSelector<singleInputData>(props.section, props.code),
   );
 
   if (!data) {

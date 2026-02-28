@@ -1,14 +1,14 @@
 import { Button } from '@/components/ui/button';
 import { useEvent } from '@/hooks';
 import { inputSelector, updateValue, useQRScoutState } from '@/store/store';
-import { Minus, Plus } from 'lucide-react';
+import { ChevronRight, ChevronLeft, ChevronsRight, ChevronsLeft }  from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
-import { DecInputData } from './BaseInputProps';
+import { doubleInputData } from './BaseInputProps';
 import { ConfigurableInputProps } from './ConfigurableInput';
 
 export default function DecCounterInput(props: ConfigurableInputProps) {
   const data = useQRScoutState(
-    inputSelector<DecInputData>(props.section, props.code),
+    inputSelector<doubleInputData>(props.section, props.code),
   );
 
   if (!data) {
@@ -28,7 +28,7 @@ export default function DecCounterInput(props: ConfigurableInputProps) {
           setValue(data.defaultValue);
           return;
         case 'increment':
-          setValue(prev => (typeof prev === 'number' ? prev + data.step : 1));
+          setValue(prev => (typeof prev === 'number' ? prev + data.step1 : 1));
           return;
         case 'preserve':
           return;
@@ -63,12 +63,18 @@ export default function DecCounterInput(props: ConfigurableInputProps) {
 
   return (
     <div className="my-2 flex flex-row items-center justify-center">
-      <Button onClick={() => handleChange(-(data.step || 1))}>
-        <Minus />
+      <Button onClick={() => handleChange(-(data.step2 || 5))}>
+        <ChevronsLeft />
+      </Button>
+      <Button onClick={() => handleChange(-(data.step1 || 1))}>
+        <ChevronLeft />
       </Button>
       <h2 className="px-4 text-2xl dark:text-white">{value}</h2>
-      <Button onClick={() => handleChange(data.step || 1)}>
-        <Plus />
+      <Button onClick={() => handleChange(data.step1 || 1)}>
+        <ChevronRight />
+      </Button>
+      <Button onClick={() => handleChange(data.step2 || 5)}>
+        <ChevronsRight />
       </Button>
     </div>
   );

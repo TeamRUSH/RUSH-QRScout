@@ -1,7 +1,8 @@
 import { InputTypes } from './BaseInputProps';
 import CheckboxInput from './CheckboxInput';
-import IntCounterInput from './IntegerCounter';
-import DecCounterInput from './DecimalCounter';
+import SingleCounterInput from './SingleCounter';
+import DoubleCounterInput from './DoubleCounter';
+import TripleCounterInput from './TripleCounter';
 import ImageInput from './ImageInput';
 import NumberInput from './NumberInput';
 import RangeInput from './RangeInput';
@@ -27,10 +28,12 @@ export default function ConfigurableInput(props: ConfigurableInputProps) {
       return <NumberInput {...props} key={props.code} />;
     case 'boolean':
       return <CheckboxInput {...props} key={props.code} />;
-    case 'int':
-      return <IntCounterInput {...props} key={props.code} />;
-    case 'dec':
-      return <DecCounterInput {...props} key={props.code} />;
+    case 'single':
+      return <SingleCounterInput {...props} key={props.code} />;
+    case 'double':
+      return <DoubleCounterInput {...props} key={props.code} />;
+    case 'triple':
+      return <TripleCounterInput {...props} key={props.code} />;
     case 'range':
       return <RangeInput {...props} key={props.code} />;
     case 'timer':

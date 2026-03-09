@@ -1,8 +1,8 @@
 import { InputTypes } from './BaseInputProps';
+import ActionTrackerInput from './ActionTrackerInput';
 import CheckboxInput from './CheckboxInput';
-import SingleCounterInput from './SingleCounter';
-import DoubleCounterInput from './DoubleCounter';
-import TripleCounterInput from './TripleCounter';
+import CounterInput from './CounterInput';
+import MultiCounterInput from './MultiCounterInput';
 import ImageInput from './ImageInput';
 import NumberInput from './NumberInput';
 import RangeInput from './RangeInput';
@@ -10,6 +10,8 @@ import SelectInput from './SelectInput';
 import StringInput from './StringInput';
 import TimerInput from './TimerInput';
 import MultiSelectInput from './MultiSelectInput';
+import TBATeamAndRobotInput from './TBATeamAndRobotInput';
+import TBAMatchNumberInput from './TBAMatchNumberInput';
 export interface ConfigurableInputProps {
   section: string;
   code: string;
@@ -28,17 +30,21 @@ export default function ConfigurableInput(props: ConfigurableInputProps) {
       return <NumberInput {...props} key={props.code} />;
     case 'boolean':
       return <CheckboxInput {...props} key={props.code} />;
-    case 'single':
-      return <SingleCounterInput {...props} key={props.code} />;
-    case 'double':
-      return <DoubleCounterInput {...props} key={props.code} />;
-    case 'triple':
-      return <TripleCounterInput {...props} key={props.code} />;
+    case 'counter':
+      return <CounterInput {...props} key={props.code} />;
+    case 'multi-counter':
+      return <MultiCounterInput {...props} key={props.code} />;
     case 'range':
       return <RangeInput {...props} key={props.code} />;
     case 'timer':
       return <TimerInput {...props} key={props.code} />;
     case 'multi-select':
       return <MultiSelectInput {...props} key={props.code} />;
+    case 'action-tracker':
+      return <ActionTrackerInput {...props} key={props.code} />;
+    case 'TBA-team-and-robot':
+      return <TBATeamAndRobotInput {...props} key={props.code} />;
+    case 'TBA-match-number':
+      return <TBAMatchNumberInput {...props} key={props.code} />;
   }
 }

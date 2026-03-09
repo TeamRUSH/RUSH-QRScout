@@ -3,12 +3,12 @@ import { useEvent } from '@/hooks';
 import { inputSelector, updateValue, useQRScoutState } from '@/store/store';
 import { Minus, Plus } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
-import { singleInputData } from './BaseInputProps';
+import { CounterInputData } from './BaseInputProps';
 import { ConfigurableInputProps } from './ConfigurableInput';
 
 export default function CounterInput(props: ConfigurableInputProps) {
   const data = useQRScoutState(
-    inputSelector<singleInputData>(props.section, props.code),
+    inputSelector<CounterInputData>(props.section, props.code),
   );
 
   if (!data) {
@@ -63,11 +63,11 @@ export default function CounterInput(props: ConfigurableInputProps) {
 
   return (
     <div className="my-2 flex flex-row items-center justify-center">
-      <Button onClick={() => handleChange(-(data.step || 1))}>
+      <Button variant="outline" onClick={() => handleChange(-(data.step || 1))}>
         <Minus />
       </Button>
       <h2 className="px-4 text-2xl dark:text-white">{value}</h2>
-      <Button onClick={() => handleChange(data.step || 1)}>
+      <Button variant="outline" onClick={() => handleChange(data.step || 1)}>
         <Plus />
       </Button>
     </div>

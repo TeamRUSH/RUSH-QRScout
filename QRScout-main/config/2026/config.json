@@ -134,7 +134,7 @@
         {
           "title": "Fuel scored",
           "description": "The amount of fuel scored in auto",
-          "type": "triple",
+          "type": "multi-select",
           "required": false,
           "code": "FIA",
           "formResetBehavior": "reset",
@@ -217,7 +217,7 @@
         {
           "title": "Fuel scored",
           "description": "The amount of fuel scored in teleop",
-          "type": "triple",
+          "type": "multi-select",
           "required": false,
           "code": "FSIT",
           "formResetBehavior": "reset",
@@ -241,7 +241,7 @@
         {
           "title": "Fuel passed",
           "description": "The amount of fuel passed in teleop",
-          "type": "triple",
+          "type": "multi-select",
           "required": false,
           "code": "FPIT",
           "formResetBehavior": "reset",

@@ -51,7 +51,7 @@ export default function RangeInput(props: ConfigurableInputProps) {
   return (
     <div className="flex flex-col items-center gap-2 p-2">
       <span className="capitalize text-secondary-foreground text-2xl">
-        {value}
+        {value*data.step}
       </span>
       <Slider
         className="w-full py-2 px-1"

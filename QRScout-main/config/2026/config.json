@@ -97,7 +97,7 @@
           "required": true,
           "code": "Prsp",
           "formResetBehavior": "reset",
-          "defaultValue": "H",
+          "defaultValue": "",
           "choices": {
             "OT": "Outpost Side Trench",
             "OB": "Outpost Side Bump",

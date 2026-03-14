@@ -80,6 +80,7 @@ export const rangeInputSchema = inputBaseSchema.extend({
   max: z.number().optional().describe('The maximum value'),
   step: z.number().optional().describe('The step value').default(1),
   defaultValue: z.number().default(0).describe('The default value'),
+  required: z.boolean().describe('If the slider being set to zero prevents the qr code from being generated')
 });
 
 export const booleanInputSchema = inputBaseSchema.extend({

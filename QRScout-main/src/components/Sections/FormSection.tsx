@@ -26,6 +26,7 @@ export default function FormSection(props: SectionProps) {
           hasValue={
             getFieldValue(input.code) !== null &&
             getFieldValue(input.code) !== undefined &&
+            getFieldValue(input.code) !== 0 &&
             getFieldValue(input.code) !== ''
           }
           description={input.description}

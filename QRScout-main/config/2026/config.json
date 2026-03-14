@@ -298,7 +298,7 @@
         {
           "title": "Climbed Tower",
           "type": "select",
-          "required": true,
+          "required": false,
           "code": "climbed",
           "formResetBehavior": "reset",
           "defaultValue": "No",
@@ -359,41 +359,41 @@
         {
           "title": "Driving Skill",
           "type": "range",
-          "required": false,
+          "required": true,
           "code": "ds",
           "formResetBehavior": "reset",
-          "defaultValue": 3,
-          "min": 0,
+          "defaultValue": 0,
+          "min": -1,
           "max": 5
         },
         {
           "title": "Speed Skill",
           "type": "range",
-          "required": false,
+          "required": true,
           "code": "ss",
           "formResetBehavior": "reset",
-          "defaultValue": 3,
-          "min": 0,
+          "defaultValue": 0,
+          "min": -1,
           "max": 5
         },
         {
           "title": "Defensive Skill",
           "type": "range",
-          "required": false,
+          "required": true,
           "code": "ds",
           "formResetBehavior": "reset",
-          "defaultValue": 3,
-          "min": 0,
+          "defaultValue": 0,
+          "min": -1,
           "max": 5
         },
         {
           "title": "Partner Skill",
           "type": "range",
-          "required": false,
+          "required": true,
           "code": "ps",
           "formResetBehavior": "reset",
-          "defaultValue": 3,
-          "min": 0,
+          "defaultValue": 0,
+          "min": -1,
           "max": 5
         },
         {

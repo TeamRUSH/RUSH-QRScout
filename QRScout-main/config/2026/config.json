@@ -1,6 +1,6 @@
 {
-  "title": "RUSH Scout",
-  "page_title": "RUSH Scout 2026",
+  "title": "RUSH Pit Scout!",
+  "page_title": "RUSH Pit Scout 2026",
   "delimiter": "\t",
   "teamNumber": 27,
   "theme": {
@@ -59,11 +59,11 @@
   },
   "sections": [
     {
-      "name": "Prematch",
+      "name": "Scouter Info",
       "fields": [
         {
           "title": "Scouter Number",
-          "description": "Enter your team number.",
+          "description": "Enter your team number on RUSH.",
           "type": "number",
           "required": true,
           "code": "scouter",
@@ -73,356 +73,223 @@
           "max": 33
         },
         {
-          "title": "Match Number",
-          "description": "Enter the match number.",
-          "type": "TBA-match-number",
-          "required": true,
-          "code": "matchNumber",
-          "formResetBehavior": "increment",
-          "defaultValue": 1
-        },
-        {
           "title": "Team Number",
           "description": "The team number of the robot you're scouting.",
-          "type": "TBA-team-and-robot",
+          "type": "number",
           "required": true,
           "code": "teamNumber",
           "formResetBehavior": "reset",
-          "defaultValue": null
+          "defaultValue": 0,
+          "min": 0
+        }
+      ]
+    },
+    {
+      "name": "Specs",
+      "fields": [
+        {
+          "title": "Robot Weight (No Bumpers)",
+          "type": "number",
+          "required": false,
+          "code": "Mass",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 150
         },
         {
-          "title": "Starting Position",
-          "description": "The starting position of the robot.",
+          "title": "Drive Train",
           "type": "select",
-          "required": true,
-          "code": "Prsp",
+          "required": false,
+          "code": "VroomVroomStyle",
           "formResetBehavior": "reset",
           "defaultValue": "",
           "choices": {
-            "OT": "Outpost Side Trench",
-            "OB": "Outpost Side Bump",
-            "H": "Hub",
-            "DB": "Depot Side Bump",
-            "DT": "Depot Side Trench"
+            "Swerve": "Swerve",
+            "Omni": "Omni",
+            "Tank": "Tank",
+            "Other": "Other"
           }
         },
         {
-          "title": "No Show",
-          "description": "Check if the robot did not show up for the match.",
-          "type": "boolean",
-          "required": false,
-          "code": "noShow",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Preload",
-          "description": "Check if the robot has preloaded any game pieces.",
-          "type": "boolean",
-          "required": false,
-          "code": "preload",
-          "formResetBehavior": "reset",
-          "defaultValue": true
-        }
-      ]
-    },
-    {
-      "name": "Autonomous",
-      "fields": [
-        {
-          "title": "Fuel scored",
-          "description": "The amount of fuel scored in auto",
-          "type": "multi-counter",
-          "required": false,
-          "code": "FIA",
-          "formResetBehavior": "reset",
-          "defaultValue": 0
-        },
-        {
-          "title": "Accuracy",
-          "type": "range",
-          "required": false,
-          "code": "AA",
-          "formResetBehavior": "reset",
-          "defaultValue": 5,
-          "min": 0,
-          "max": 10,
-          "step": 10
-        },
-        {
-          "title": "Fuel Collected From Neutral Zone",
-          "description": "Collected fuel from the Neutral Zone",
-          "type": "boolean",
-          "required": false,
-          "code": "AFFG",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Fuel Collected From HP",
-          "description": "Collected fuel from the human player",
-          "type": "boolean",
-          "required": false,
-          "code": "AFFHP",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Fuel Collected From Depot",
-          "description": "Collected fuel from the depot",
-          "type": "boolean",
-          "required": false,
-          "code": "AFFD",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Climbed Tower",
-          "description": "Check if the robot climbed in auto",
-          "type": "boolean",
-          "required": false,
-          "code": "climbedAuto",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Drove Over Bump",
-          "description": "Drove over the bump",
-          "type": "boolean",
-          "required": false,
-          "code": "DOBA",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Drove Under Trench",
-          "description": "Drove under the trench",
-          "type": "boolean",
-          "required": false,
-          "code": "DUTA",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        }
-      ]
-    },
-    {
-      "name": "Teleop",
-      "fields": [
-        {
-          "title": "Fuel scored",
-          "description": "The amount of fuel scored in teleop",
-          "type": "multi-counter",
-          "required": false,
-          "code": "FSIT",
-          "formResetBehavior": "reset",
-          "defaultValue": 0
-        },
-        {
-          "title": "Accuracy",
-          "type": "range",
-          "required": false,
-          "code": "TA",
-          "formResetBehavior": "reset",
-          "defaultValue": 5,
-          "min": 0,
-          "max": 10,
-          "step": 10
-        },
-        {
-          "title": "Fuel passed",
-          "description": "The amount of fuel passed in teleop",
-          "type": "multi-counter",
-          "required": false,
-          "code": "FPIT",
-          "formResetBehavior": "reset",
-          "defaultValue": 0
-        },
-        {
-          "title": "Fuel Collected From Neutral Zone",
-          "description": "Collected fuel from the Neutral Zone",
-          "type": "boolean",
-          "required": false,
-          "code": "TFFG",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Fuel Collected From HP",
-          "description": "Collected fuel from the human player",
-          "type": "boolean",
-          "required": false,
-          "code": "TFFHP",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Fuel Collected From Depot",
-          "description": "Collected fuel from the depot",
-          "type": "boolean",
-          "required": false,
-          "code": "TFFD",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Crossed Field/Played Defense?",
-          "type": "boolean",
-          "required": false,
-          "code": "CFPDT",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Drove Over Bump",
-          "description": "Drove over the bump",
-          "type": "boolean",
-          "required": false,
-          "code": "DOBT",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        },
-        {
-          "title": "Drove Under Trench",
-          "description": "Drove under the trench",
-          "type": "boolean",
-          "required": false,
-          "code": "DUTT",
-          "formResetBehavior": "reset",
-          "defaultValue": false
-        }
-      ]
-    },
-    {
-      "name": "Endgame",
-      "fields": [
-        {
-          "title": "Climbed Tower",
+          "title": "Bot Type",
           "type": "select",
           "required": false,
-          "code": "climbed",
+          "code": "Stereotype",
           "formResetBehavior": "reset",
-          "defaultValue": "No",
+          "defaultValue": "",
           "choices": {
-            "No": "Didn't Climb",
+            "Turret": "Turret",
+            "Dumper": "Dumper",
+            "Both": "Both",
+            "Other": "Other"
+          }
+        },
+        {
+          "title": "Fuel Capacity",
+          "type": "number",
+          "required": false,
+          "code": "JunkInTrunk",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "max": 100
+        },
+        {
+          "title": "Max Fuel Per Second",
+          "type": "number",
+          "required": false,
+          "code": "Dumpage",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0
+        }
+      ]
+    },
+    {
+      "name": "Abilities",
+      "fields": [
+        {
+          "title": "Over Bump",
+          "type": "boolean",
+          "required": false,
+          "code": "RampinIt",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Under Trench",
+          "type": "boolean",
+          "required": false,
+          "code": "LIMBO!",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel Off Ground",
+          "type": "boolean",
+          "required": false,
+          "code": "BottomFeeder",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel From HP",
+          "description": "Can they collect fuel from the human player",
+          "type": "boolean",
+          "required": false,
+          "code": "SpoonFed",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Fuel From Depot",
+          "description": "Collected fuel from the depot",
+          "type": "boolean",
+          "required": false,
+          "code": "MetallicCorral",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        },
+        {
+          "title": "Auto-Alignment For Scoring?",
+          "type": "boolean",
+          "required": false,
+          "code": "AILineup",
+          "formResetBehavior": "reset",
+          "defaultValue": false
+        }
+      ]
+    },
+    {
+      "name": "Climb",
+      "fields": [
+        {
+          "title": "Can Climb Tower",
+          "type": "select",
+          "required": true,
+          "code": "GoingUp",
+          "formResetBehavior": "reset",
+          "defaultValue": "",
+          "choices": {
+            "No": "Can't Climb",
             "L1": "Level 1",
             "L2": "Level 2",
-            "L3": "Level 3",
-            "F": "Failed Climb"
+            "L3": "Level 3"
           }
         },
         {
-          "title": "Time When Started Climb",
-          "description": "The time remaining on the clock when the robot began climbing.",
-          "type": "number",
+          "title": "Is Climb Consistent?",
+          "description": "Do they usually get their climb?",
+          "type": "boolean",
           "required": false,
-          "code": "timeToClimb",
+          "code": "LondonBridge",
           "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": 0,
-          "max": 150
-        },
-        {
-          "title": "Action If Didn't Climb",
-          "type": "select",
-          "required": true,
-          "code": "AltAction",
-          "formResetBehavior": "reset",
-          "defaultValue": "NA",
-          "choices": {
-            "NA": "N/A",
-            "D": "Defended",
-            "KS": "Kept Scoring",
-            "N": "Just Sat There"
-          }
+          "defaultValue": false
         }
       ]
     },
     {
-      "name": "Postmatch",
+      "name": "Pit",
       "fields": [
         {
-          "title": "Fuel Per Second",
-          "description": "The robot you are scouting's fuel per second.",
-          "type": "select",
-          "required": true,
-          "code": "fps",
-          "formResetBehavior": "reset",
-          "defaultValue": "",
-          "choices": {
-            "Poor": "0 - 5",
-            "Low": "6 - 10",
-            "Med": "11 - 15",
-            "High": "16 - 20",
-            "Super": "21+"
-          }
-        },
-        {
-          "title": "Driving Skill",
-          "type": "range",
-          "required": true,
-          "code": "ds",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": -1,
-          "max": 5
-        },
-        {
-          "title": "Speed Skill",
-          "type": "range",
-          "required": true,
-          "code": "ss",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": -1,
-          "max": 5
-        },
-        {
-          "title": "Defensive Skill",
-          "type": "range",
-          "required": true,
-          "code": "ds",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": -1,
-          "max": 5
-        },
-        {
-          "title": "Partner Skill",
-          "type": "range",
-          "required": true,
-          "code": "ps",
-          "formResetBehavior": "reset",
-          "defaultValue": 0,
-          "min": -1,
-          "max": 5
-        },
-        {
-          "title": "Time Of Loss Of Function",
-          "description": "The amount of time during which the robot was inoperable in any way.",
+          "title": "Batteries",
+          "description": "The number of batteries they have at the competition.",
           "type": "number",
-          "required": false,
-          "code": "timeDead",
+          "required": true,
+          "code": "JuiceBoxes",
           "formResetBehavior": "reset",
           "defaultValue": 0,
-          "min": 0,
-          "max": 150
+          "min": 0
         },
         {
-          "title": "2+ Penalties",
-          "description": "Did they get more than 2 penalties in the whole match?",
+          "title": "Spare Parts?",
+          "type": "text",
+          "required": false,
+          "code": "NutsAndBolts",
+          "formResetBehavior": "reset",
+          "defaultValue": ""
+        },
+        {
+          "title": "Help Needed?",
+          "type": "text",
+          "required": false,
+          "code": "PlzDonate",
+          "formResetBehavior": "reset",
+          "defaultValue": ""
+        }
+      ]
+    },
+    {
+      "name": "Auto",
+      "fields": [
+        {
+          "title": "Amount Of Autons",
+          "description": "The number of different autons they can run.",
+          "type": "number",
+          "required": true,
+          "code": "HowMuchBrisket",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0
+        },
+        {
+          "title": "Is Auton Consistent?",
+          "description": "Do they always play the auton correct",
           "type": "boolean",
           "required": false,
-          "code": "M2P",
+          "code": "No",
           "formResetBehavior": "reset",
           "defaultValue": false
         },
         {
-          "title": "Comments",
-          "type": "text",
+          "title": "Field Reference",
+          "type": "image",
           "required": false,
-          "code": "co",
-          "formResetBehavior": "reset",
-          "defaultValue": ""
+          "code": "fieldReference",
+          "description": "Use this diagram to identify field positions",
+          "defaultValue": "",
+          "width": 500,
+          "formResetBehavior": "preserve"
         }
       ]
     }

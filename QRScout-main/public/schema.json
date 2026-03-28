@@ -352,12 +352,12 @@
                     "step2": {
                       "type": "number",
                       "description": "The middle step value",
-                      "default": 1
+                      "default": 5
                     },
                     "step3": {
                       "type": "number",
                       "description": "The largest step value",
-                      "default": 1
+                      "default": 10
                     }
                   },
                   "required": [

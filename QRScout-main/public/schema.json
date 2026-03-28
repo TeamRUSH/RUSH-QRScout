@@ -298,6 +298,80 @@
                   "type": "object",
                   "properties": {
                     "title": {
+                      "type": "string",
+                      "description": "The title of the input"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "The description of the input"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "multi-counter"
+                    },
+                    "required": {
+                      "type": "boolean",
+                      "description": "Whether this input is required"
+                    },
+                    "code": {
+                      "type": "string",
+                      "description": "A unique code for this input"
+                    },
+                    "disabled": {
+                      "type": "boolean",
+                      "description": "Whether this input is disabled"
+                    },
+                    "formResetBehavior": {
+                      "type": "string",
+                      "enum": [
+                        "reset",
+                        "preserve",
+                        "increment"
+                      ],
+                      "default": "reset",
+                      "description": "The behavior of this input when the form is reset"
+                    },
+                    "defaultValue": {
+                      "type": "number",
+                      "default": 0,
+                      "description": "The default value"
+                    },
+                    "min": {
+                      "type": "number",
+                      "description": "The minimum value"
+                    },
+                    "max": {
+                      "type": "number",
+                      "description": "The maximum value"
+                    },
+                    "step1": {
+                      "type": "number",
+                      "description": "The smallest step value",
+                      "default": 1
+                    },
+                    "step2": {
+                      "type": "number",
+                      "description": "The middle step value",
+                      "default": 1
+                    },
+                    "step3": {
+                      "type": "number",
+                      "description": "The largest step value",
+                      "default": 1
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "type",
+                    "required",
+                    "code"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "title": {
                       "$ref": "#/properties/sections/items/properties/fields/items/anyOf/0/properties/title"
                     },
                     "description": {

@@ -71,6 +71,9 @@ export const counterInputSchema = inputBaseSchema.extend({
 
 export const multiCounterInputSchema = inputBaseSchema.extend({
   type: z.literal('multi-counter'),
+  step1: z.number().optional().default(1).describe('The lowest step value'),
+  step2: z.number().optional().default(5).describe('The middle step value'),
+  step3: z.number().optional().default(10).describe('The largest step value'),
   defaultValue: z.number().default(0).describe('The default value'),
 });
 

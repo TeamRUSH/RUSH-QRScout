@@ -3,6 +3,7 @@
   "page_title": "RUSH Pit Scout 2026",
   "delimiter": "\t",
   "teamNumber": 27,
+  "Year": 2026,
   "theme": {
     "light": {
       "background": "48 100% 51%",
@@ -295,6 +296,15 @@
           "defaultValue": "https://teamRUSH.github.io/RUSH-QRScout/QRScout-main/public/Examples%20of%20photos.png",
           "width": 500,
           "formResetBehavior": "preserve"
+        },
+        {
+          "title": "Drive Teams",
+          "description": "The number of unique drive teams they have, if they rotate them out. If they only have 1 drive team, set it as 1.",
+          "code": "DTMs",
+          "type": "number",
+          "defaultValue": 0,
+          "formResetBehavior": "reset",
+          "required": true
         },
         {
           "title": "Comments",

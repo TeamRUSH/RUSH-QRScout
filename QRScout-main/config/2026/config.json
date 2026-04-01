@@ -154,6 +154,18 @@
           "step": 10
         },
         {
+          "title": "Fuel Fed To HP",
+          "description": "The amount of fuel fed to the human players in auton",
+          "type": "multi-counter",
+          "required": false,
+          "code": "FFHPIA",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "step1": 1,
+          "step2": 5,
+          "step3": 10
+        },
+        {
           "title": "Fuel Collected From Neutral Zone",
           "description": "Collected fuel from the Neutral Zone",
           "type": "boolean",
@@ -250,6 +262,18 @@
           "type": "multi-counter",
           "required": false,
           "code": "FPIT",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "step1": 1,
+          "step2": 5,
+          "step3": 10
+        },
+        {
+          "title": "Fuel Fed To HP",
+          "description": "The amount of fuel fed to the human players in teleop",
+          "type": "multi-counter",
+          "required": false,
+          "code": "FFHPIT",
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "step1": 1,

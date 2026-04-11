@@ -175,7 +175,7 @@
           "defaultValue": false
         },
         {
-          "title": "Fuel Collected From HP",
+          "title": "HP Fed To Robot",
           "description": "Collected fuel from the human player",
           "type": "boolean",
           "required": false,
@@ -290,7 +290,7 @@
           "defaultValue": false
         },
         {
-          "title": "Fuel Collected From HP",
+          "title": "HP Fed To Robot",
           "description": "Collected fuel from the human player",
           "type": "boolean",
           "required": false,
@@ -341,6 +341,17 @@
           "code": "MST",
           "formResetBehavior": "reset",
           "defaultValue": false
+        },
+        {
+          "title": "Time Effectively Defending (Read Description)",
+          "description": "The amount of time, in seconds, during which the robot was OBVIOUSLY causing them to be incapable of scoring.",
+          "type": "number",
+          "required": false,
+          "code": "timeOfDef",
+          "formResetBehavior": "reset",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 160
         }
       ]
     },
@@ -461,7 +472,7 @@
           "formResetBehavior": "reset",
           "defaultValue": 0,
           "min": 0,
-          "max": 150
+          "max": 160
         },
         {
           "title": "2+ Penalties",

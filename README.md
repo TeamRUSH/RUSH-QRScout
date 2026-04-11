@@ -6,3 +6,4 @@ Changes from the original app (useful if creating your own version):
 
 This list will be updated as the app progresses.
 So yeah, that's all I have to say about this.
+Oh yeah, btw this is old and outdated but i'm too lazy to change this so yeah :3
